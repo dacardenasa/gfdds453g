@@ -15,7 +15,7 @@ export class App extends Component {
           <Link to="/page2">Page 2</Link>
         </nav>
         <Switch>
-          <Route exact path="/" component={Page1} />
+          <Redirect exact from="/" to="/page1" />
           <Route path="/page1" component={Page1} />
           <Route path="/page2" component={Page2} />
           <Route component={NotFound} />
