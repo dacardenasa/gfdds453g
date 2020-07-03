@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {
-  BrowserRouter as Router,
   Switch,
   Route,
   Redirect,
@@ -10,20 +9,18 @@ import {
 export class App extends Component {
   render() {
     return (
-      <Router>
-        <div>
-          <nav>
-            <Link to="/page1">Page 1</Link>
-            <Link to="/page2">Page 2</Link>
-          </nav>
-          <Switch>
-            <Route exact path="/" component={Page1} />
-            <Route path="/page1" component={Page1} />
-            <Route path="/page2" component={Page2} />
-            <Route component={NotFound} />
-          </Switch>
-        </div>
-      </Router>
+      <div>
+        <nav>
+          <Link to="/page1">Page 1</Link>
+          <Link to="/page2">Page 2</Link>
+        </nav>
+        <Switch>
+          <Route exact path="/" component={Page1} />
+          <Route path="/page1" component={Page1} />
+          <Route path="/page2" component={Page2} />
+          <Route component={NotFound} />
+        </Switch>
+      </div>
     );
   }
 }
